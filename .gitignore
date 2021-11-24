@@ -1,0 +1,4 @@
+.idea/
+.srctrail/
+cmake-build-debug/
+*.csv
