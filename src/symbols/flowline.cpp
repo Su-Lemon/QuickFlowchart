@@ -3,3 +3,5 @@
 //
 
 #include "flowline.h"
+
+Node::Node(const Node::Type type) : type(type){}

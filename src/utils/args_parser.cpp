@@ -3,8 +3,9 @@
 #include "args_parser.h"
 
 void ShowHelp() {
-    std::cout << "Quick Flowchart: A tool to quickly generate small flowcharts using pseudo-code.\n";
-    std::cout << std::string(60, '-') << std::endl;
+    std::cout << "\t\t\t\t\t* Quick Flowchart *\n";
+    std::cout << "A tool to quickly generate small flowcharts using pseudo-code.\n";
+    std::cout << std::string(62, '-') << std::endl;
     std::cout << "| -h  | Help info.\n\n";
     std::cout << "| -f  | The path of the user-written pseudo-code file.\n";
     std::cout << "| -o  | The path of the generated flowchart file.\n";
