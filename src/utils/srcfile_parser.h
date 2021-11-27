@@ -8,7 +8,7 @@
 #include <cstring>
 
 #include "common.h"
-#include "flowline.h"
+#include "node.h"
 #include "block.h"
 
 class FileParser{

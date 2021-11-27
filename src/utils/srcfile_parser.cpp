@@ -87,11 +87,11 @@ void FileParser::ReadPerBlock() {
     this->keyword_list.push_back(new EndBlock(curr_pos));
 }
 
-FileParser::EncodingInfo FileParser::QueryEncodingSheet(int num, Block::Type block_type, std::pair<int, int> pos) {
+std::shared_ptr<Node> FileParser::ParseBlock() {
 
 }
 
-std::shared_ptr<Node> FileParser::ParseBlock() {
+FileParser::EncodingInfo FileParser::QueryEncodingSheet(int num, Block::Type block_type, std::pair<int, int> pos) {
 
 }
 

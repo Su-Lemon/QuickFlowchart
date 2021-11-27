@@ -2,8 +2,8 @@
 // Created by SuWei on 2021/11/24.
 //
 
-#ifndef QUICKFLOWCHART_FLOWLINE_H
-#define QUICKFLOWCHART_FLOWLINE_H
+#ifndef QUICKFLOWCHART_NODE_H
+#define QUICKFLOWCHART_NODE_H
 
 class Node{
 public:
@@ -14,4 +14,4 @@ public:
     Node(const Type type);
 
 };
-#endif //QUICKFLOWCHART_FLOWLINE_H
+#endif //QUICKFLOWCHART_NODE_H
