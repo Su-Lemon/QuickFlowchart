@@ -9,12 +9,12 @@
 
 // Hold info from cmd
 struct CmdArgs{
-    bool isre_dir;
+    bool is_export;
     std::string srcfile_path;
     std::string chart_path;
 
-    explicit CmdArgs(std::string srcfile_path) : isre_dir(false), srcfile_path(std::move(srcfile_path)) {};
-    CmdArgs(std::string srcfile_path, std::string chart_path) : isre_dir(false), srcfile_path(std::move(srcfile_path)), chart_path(std::move(chart_path)) {};
+    explicit CmdArgs(std::string srcfile_path) : is_export(false), srcfile_path(std::move(srcfile_path)) {};
+    CmdArgs(std::string srcfile_path, std::string chart_path) : is_export(false), srcfile_path(std::move(srcfile_path)), chart_path(std::move(chart_path)) {};
 };
 
 void ShowHelp();

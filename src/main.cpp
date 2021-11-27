@@ -15,6 +15,8 @@ int main(int argc, char *argv[]) {
     std::unique_ptr<FileParser> file_parser = std::make_unique<FileParser>(cmd_args.srcfile_path);
 
     file_parser->ReadPerBlock();
+    std::shared_ptr<Node> node = file_parser->ParseBlock();
+    node->Print(0);
 
     return 0;
 }

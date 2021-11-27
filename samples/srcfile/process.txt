@@ -1,2 +1,17 @@
-first;
-sec  ond;
+Start;
+Conv 3D;
+while(Feat){
+    if(Flag=1){
+        Do work 1Do work 1Do work 1Do work 1Do work 1;
+        if(N=2){
+            Play;
+        }else {
+            DO;
+        }
+    }
+    else{
+        Do work 2;
+    }
+}
+FC;
+End;

@@ -7,8 +7,11 @@
 
 #include <iostream>
 #include <memory>
+#include <vector>
 
 #if DEBUG
+#include <cassert>
+//#include "dbg_macro/dbg.h"
 #include "ext_tools.h"
 #endif
 

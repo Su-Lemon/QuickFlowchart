@@ -4,7 +4,6 @@
 #define QUICKFLOWCHART_SRCFILE_PARSER_H
 
 #include <fstream>
-#include <vector>
 #include <cstring>
 
 #include "common.h"
@@ -15,21 +14,29 @@ class FileParser{
 private:
     std::string file_path;
     std::fstream fs;
-    std::vector<Block *> keyword_list;
+    std::vector<Block *> block_list;
 
-    struct EncodingInfo{
+    struct ConnectInfo{
         enum class Action:int{ SHIFT, GOTO, REDUCE, ACCEPT };
         Action action;
         int num;
 
-        EncodingInfo(Action action) : action(action){};
-        EncodingInfo(Action action, int num) : action(action), num(num){};
+        explicit ConnectInfo(Action action) : action(action){};
+        ConnectInfo(Action action, int num) : action(action), num(num){};
+    };
+
+    struct ReductionInfo{
+        Block::Type new_block_type;
+        int pop_num;
+
+        ReductionInfo(Block::Type new_block_type, int pop_num) : new_block_type(new_block_type), pop_num(pop_num) {};
     };
 
 public:
-    FileParser(const std::string &file_path);
+    explicit FileParser(const std::string &file_path);
     void ReadPerBlock();
-    EncodingInfo QueryEncodingSheet(int num, Block::Type block_type, std::pair<int, int> pos);
+    ConnectInfo QueryEncodingSheet(int curr_state, Block::Type block_type, std::pair<int, int> pos);
+    ReductionInfo GetReductionInfo(int productionNum);
     std::shared_ptr<Node> ParseBlock();
 
     ~FileParser();

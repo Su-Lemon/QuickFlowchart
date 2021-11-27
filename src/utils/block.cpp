@@ -16,9 +16,9 @@ ElseBlock::ElseBlock(std::pair<int, int> pos) : Block(Type::ELSE, pos){}
 
 WhileBlock::WhileBlock(std::pair<int, int> pos) : Block(Type::WHILE, pos){}
 
-BeginBlock::BeginBlock(std::pair<int, int> pos) : Block(Type::BEGIN, pos){}
+BeginBlock::BeginBlock() : Block(Type::BEGIN, std::make_pair(0, 0), 1){}
 
-EndBlock::EndBlock(std::pair<int, int> pos) : Block(Type::END, pos){}
+EndBlock::EndBlock() : Block(Type::END){}
 
 LBraceBlock::LBraceBlock(std::pair<int, int> pos) : Block(Type::LBRACE, pos){}
 

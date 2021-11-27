@@ -55,12 +55,12 @@ public:
 
 class BeginBlock : public Block{
 public:
-    BeginBlock(std::pair<int, int> pos);
+    BeginBlock();
 };
 
 class EndBlock : public Block{
 public:
-    EndBlock(std::pair<int, int> pos);
+    EndBlock();
 };
 
 class LBraceBlock : public Block{
